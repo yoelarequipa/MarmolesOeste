@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mármoles Oeste – Fabricación e instalación de mármoles, granitos, cuarzos, mesadas, bachas y griferías. Más de 20 años de experiencia en el oeste del Gran Buenos Aires." />
+  <title>Mármoles Oeste | Elegancia en Piedra Natural</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <!-- Logo -->
+      <a href="#" class="navbar__logo" data-tab="inicio">
+        <span class="logo-mark">M</span>
+        <span class="logo-text">Mármoles<strong>Oeste</strong></span>
+      </a>
+
+      <!-- Desktop nav tabs -->
+      <nav class="navbar__links" id="navLinks" aria-label="Navegación principal">
+        <button class="nav-link active-link" data-tab="inicio"    aria-selected="true">Inicio</button>
+        <button class="nav-link"             data-tab="nosotros"  aria-selected="false">Quiénes Somos</button>
+        <button class="nav-link"             data-tab="productos" aria-selected="false">Productos</button>
+        <button class="nav-link"             data-tab="contacto"  aria-selected="false">Contacto</button>
+      </nav>
+
+      <!-- Hamburger button -->
+      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       TAB PAGES WRAPPER
+  ══════════════════════════════════════════ -->
+  <main class="tab-pages">
+
+    <!-- ─── TAB: INICIO ─────────────────────── -->
+    <div class="tab-page active" id="tab-inicio">
+      <section class="hero">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+          <p class="hero__eyebrow anim-in">Mármoles · Granitos · Cuarzos</p>
+          <h1 class="hero__title anim-in">Calidad y elegancia<br /><em>en mármoles para tu hogar</em></h1>
+          <p class="hero__subtitle anim-in">Transformamos espacios con materiales nobles, corte de precisión<br />y más de 20 años de experiencia artesanal.</p>
+          <button class="btn btn--gold anim-in" data-tab="contacto">Solicitar presupuesto</button>
+        </div>
+        <div class="hero__scroll-indicator"><span></span></div>
+      </section>
+    </div>
+
+    <!-- ─── TAB: QUIÉNES SOMOS ──────────────── -->
+    <div class="tab-page" id="tab-nosotros">
+      <section class="section nosotros">
+        <div class="container">
+
+          <div class="section__header anim-in">
+            <p class="section__tag">Sobre nosotros</p>
+            <h2 class="section__title">Una tradición familiar<br />de <em>excelencia</em></h2>
+          </div>
+
+          <div class="nosotros__grid">
+            <div class="nosotros__story anim-in" style="--delay:.1s">
+              <p>Mármoles Oeste nació en el año 2004 en el corazón del oeste bonaerense, de la mano de la familia Pereyra, con una sola premisa: llevar materiales de primer nivel a hogares que merecen lo mejor.</p>
+              <p>Con más de dos décadas de trayectoria, hemos equipado cocinas, baños, salones y escaleras de miles de hogares y locales comerciales, trabajando con piedras naturales de las más prestigiosas canteras del país y del mundo.</p>
+              <p>Nuestro taller cuenta con tecnología CNC de última generación que combina el ojo experto de nuestros artesanos con la precisión milimétrica del corte digital. Cada pieza es única, fabricada a medida y terminada a mano.</p>
+              <button class="btn btn--outline" data-tab="contacto">Hablemos de tu proyecto</button>
+            </div>
+
+            <div class="nosotros__values">
+              <div class="value-card anim-in" style="--delay:.15s">
+                <div class="value-card__icon">✦</div>
+                <h3>Calidad garantizada</h3>
+                <p>Trabajamos exclusivamente con materiales certificados de primera selección, sin compromisos.</p>
+              </div>
+              <div class="value-card anim-in" style="--delay:.22s">
+                <div class="value-card__icon">◈</div>
+                <h3>20+ años de experiencia</h3>
+                <p>Dos décadas perfeccionando técnicas y construyendo confianza con cada cliente.</p>
+              </div>
+              <div class="value-card anim-in" style="--delay:.29s">
+                <div class="value-card__icon">⬡</div>
+                <h3>Diseño a medida</h3>
+                <p>Cada proyecto es único. Asesoramos, diseñamos y ejecutamos según tus necesidades.</p>
+              </div>
+              <div class="value-card anim-in" style="--delay:.36s">
+                <div class="value-card__icon">◇</div>
+                <h3>Compromiso total</h3>
+                <p>Acompañamos el proceso de principio a fin, desde la elección del material hasta la instalación.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ─── TAB: PRODUCTOS ───────────────────── -->
+    <div class="tab-page" id="tab-productos">
+      <section class="section productos">
+        <div class="container">
+
+          <div class="section__header anim-in">
+            <p class="section__tag">Catálogo</p>
+            <h2 class="section__title">Nuestros <em>productos</em></h2>
+            <p class="section__subtitle">Materiales nobles para cada rincón de tu hogar</p>
+          </div>
+
+          <!-- Filter tabs -->
+          <div class="filter-tabs anim-in" role="tablist" aria-label="Categorías de productos">
+            <button class="filter-tab active" data-filter="all"      role="tab" aria-selected="true">Todos</button>
+            <button class="filter-tab"        data-filter="piedras"  role="tab" aria-selected="false">Piedras</button>
+            <button class="filter-tab"        data-filter="mesadas"  role="tab" aria-selected="false">Mesadas</button>
+            <button class="filter-tab"        data-filter="banos"    role="tab" aria-selected="false">Baños</button>
+            <button class="filter-tab"        data-filter="bachas"   role="tab" aria-selected="false">Bachas</button>
+            <button class="filter-tab"        data-filter="griferia" role="tab" aria-selected="false">Griferías</button>
+          </div>
+
+          <!-- Products grid -->
+          <div class="products-grid" id="productsGrid">
+
+            <article class="product-card anim-in" data-category="piedras" style="--delay:.05s">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Mármol Carrara blanco" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__tag">Mármoles</span>
+                <h3>Mármol Carrara</h3>
+                <p>El clásico blanco italiano con veteado gris suave. Ideal para mesadas, pisos y revestimientos de alta gama.</p>
+              </div>
+            </article>
+
+            <article class="product-card anim-in" data-category="piedras" style="--delay:.10s">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80" alt="Mármol Travertino" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__tag">Mármoles</span>
+                <h3>Travertino Romano</h3>
+                <p>Textura cálida y orgánica perfecta para ambientes que buscan un estilo rústico de lujo y atemporalidad.</p>
+              </div>
+            </article>
+
+            <article class="product-card anim-in" data-category="piedras" style="--delay:.15s">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Granito negro absoluto" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__tag">Granitos</span>
+                <h3>Granito Negro Absoluto</h3>
+                <p>Resistente, durable y de aspecto sofisticado. La elección preferida para cocinas y exteriores exigentes.</p>
+              </div>
+            </article>
+
+            <article class="product-card anim-in" data-category="piedras" style="--delay:.20s">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1556909211-36987daf7b4d?w=600&q=80" alt="Cuarzo blanco engineered" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__tag">Cuarzos</span>
+                <h3>Cuarzo Blanco Nieve</h3>
+                <p>Superficie no porosa, antibacterial e inalterable. La alternativa moderna al mármol natural para cocinas.</p>
+              </div>
+            </article>
+
+            <article class="product-card anim-in" data-category="mesadas" style="--delay:.05s">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80" alt="Mesada de cocina moderna" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__tag">Mesadas</span>
+                <h3>Mesadas de Cocina</h3>
+                <p>Diseño y funcionalidad en un solo material. Fabricamos a medida con terminaciones pulidas, apomazadas o satinadas.</p>
+              </div>
+            </article>
+
+            <article class="product-card anim-in" data-category="mesadas" style="--delay:.10s">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Escalera de mármol" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__tag">Escaleras</span>
+                <h3>Escaleras en Piedra</h3>
+                <p>Peldaños, contrahuellas y pasamanos en mármol o granito que convierten la circulación en una experiencia estética.</p>
+              </div>
+            </article>
+
+            <article class="product-card anim-in" data-category="banos" style="--delay:.05s">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Baño revestido en mármol" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__tag">Baños</span>
+                <h3>Revestimientos para Baño</h3>
+                <p>Paredes, pisos y vanitorios en piedra natural que elevan cualquier baño a la categoría de spa de lujo.</p>
+              </div>
+            </article>
+
+            <article class="product-card anim-in" data-category="bachas" style="--delay:.05s">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80" alt="Bacha de acero inoxidable" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__tag">Bachas</span>
+                <h3>Bachas de Acero</h3>
+                <p>Modelos embutidos, de sobre-encimera y bajo-mesada en acero inoxidable. Robustez y diseño en perfecta armonía.</p>
+              </div>
+            </article>
+
+            <article class="product-card anim-in" data-category="bachas" style="--delay:.10s">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80" alt="Bacha de apoyo moderna" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__tag">Bachas</span>
+                <h3>Bachas de Apoyo</h3>
+                <p>Diseños modernos y orgánicos en cerámica y piedra que se convierten en el centro de atención del baño.</p>
+              </div>
+            </article>
+
+            <article class="product-card anim-in" data-category="griferia" style="--delay:.05s">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80" alt="Grifería moderna dorada" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__tag">Griferías</span>
+                <h3>Griferías de Diseño</h3>
+                <p>Líneas modernas en cromado, negro mate y dorado. Complemento perfecto para cada estilo arquitectónico.</p>
+              </div>
+            </article>
+
+            <article class="product-card anim-in" data-category="griferia" style="--delay:.10s">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1564540583246-934409427776?w=600&q=80" alt="Ducha con grifería moderna" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__tag">Griferías</span>
+                <h3>Columnas de Ducha</h3>
+                <p>Sistemas de ducha con lluvia, jets e iluminación. La experiencia de spa en la comodidad de tu hogar.</p>
+              </div>
+            </article>
+
+            <article class="product-card anim-in" data-category="piedras" style="--delay:.25s">
+              <div class="product-card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=600&q=80" alt="Granito arabesco multicolor" loading="lazy" />
+              </div>
+              <div class="product-card__body">
+                <span class="product-card__tag">Granitos</span>
+                <h3>Granito Arabesco</h3>
+                <p>Veteado multicolor único en cada pieza. Rojo, ocre y negro que crean composiciones irrepetibles en cada slab.</p>
+              </div>
+            </article>
+
+          </div><!-- /products-grid -->
+        </div>
+      </section>
+    </div>
+
+    <!-- ─── TAB: CONTACTO ───────────────────── -->
+    <div class="tab-page" id="tab-contacto">
+      <section class="section contacto">
+        <div class="container">
+
+          <div class="section__header anim-in">
+            <p class="section__tag">Contacto</p>
+            <h2 class="section__title">Hablemos de tu<br /><em>próximo proyecto</em></h2>
+          </div>
+
+          <div class="contacto__grid">
+
+            <!-- Form -->
+            <div class="contacto__form-wrap anim-in" style="--delay:.1s">
+              <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                  <label for="nombre">Nombre completo *</label>
+                  <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" autocomplete="name" />
+                  <span class="form-error" id="error-nombre"></span>
+                </div>
+                <div class="form-group">
+                  <label for="telefono">Teléfono *</label>
+                  <input type="tel" id="telefono" name="telefono" placeholder="+54 11 1234-5678" autocomplete="tel" />
+                  <span class="form-error" id="error-telefono"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Correo electrónico *</label>
+                  <input type="email" id="email" name="email" placeholder="juan@email.com" autocomplete="email" />
+                  <span class="form-error" id="error-email"></span>
+                </div>
+                <div class="form-group">
+                  <label for="mensaje">Contanos sobre tu proyecto *</label>
+                  <textarea id="mensaje" name="mensaje" rows="5" placeholder="Quiero una mesada de cocina en cuarzo blanco para..."></textarea>
+                  <span class="form-error" id="error-mensaje"></span>
+                </div>
+                <button type="submit" class="btn btn--gold btn--full">Enviar mensaje</button>
+                <p class="form-success" id="formSuccess">✓ ¡Mensaje enviado! Te contactamos a la brevedad.</p>
+              </form>
+            </div>
+
+            <!-- Contact info -->
+            <div class="contacto__info anim-in" style="--delay:.2s">
+              <div class="info-block">
+                <div class="info-block__icon">📍</div>
+                <div>
+                  <h4>Local</h4>
+                  <p>Belisario Roldán 2185, La Reja<br />Partido de Moreno, Buenos Aires</p>
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="info-block__icon">📞</div>
+                <div>
+                  <h4>Teléfono</h4>
+                  <p><a href="tel:+5491172065526">+54 11 7206-5526</a></p>
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="info-block__icon">✉️</div>
+                <div>
+                  <h4>Email</h4>
+                  <p><a href="mailto:marmolesoestevp@gmail.com">marmolesoestevp@gmail.com</a></p>
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="info-block__icon">🕐</div>
+                <div>
+                  <h4>Horarios</h4>
+                  <p>Lunes a Viernes: 8:00 – 17:30 hs<br />Sábados: 9:00 – 13:00 hs</p>
+                </div>
+              </div>
+
+              <div class="map-wrap">
+                <iframe
+                  title="Ubicación Mármoles Oeste"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.7051599614665!2d-58.815092719601054!3d-34.6349293495521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9411448a96b1%3A0xe946557eaa1da1f6!2sM%C3%81RMOLES%20OESTE!5e0!3m2!1ses!2sar!4v1776988960128!5m2!1ses!2sar"
+                  width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main><!-- /tab-pages -->
+
+  <!-- ══════════════════════════════════════════
+       FOOTER (siempre visible)
+  ══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="navbar__logo" data-tab="inicio">
+            <span class="logo-mark">M</span>
+            <span class="logo-text">Mármoles<strong>Oeste</strong></span>
+          </a>
+          <p>Fabricación e instalación de mármoles, granitos, cuarzos, mesadas, bachas y griferías. Calidad sin compromiso desde 2004.</p>
+        </div>
+        <div class="footer__links">
+          <h5>Navegación</h5>
+          <button class="footer-nav-btn" data-tab="inicio">Inicio</button>
+          <button class="footer-nav-btn" data-tab="nosotros">Quiénes Somos</button>
+          <button class="footer-nav-btn" data-tab="productos">Productos</button>
+          <button class="footer-nav-btn" data-tab="contacto">Contacto</button>
+        </div>
+        <div class="footer__links">
+          <h5>Productos</h5>
+          <button class="footer-nav-btn" data-tab="productos">Mármoles</button>
+          <button class="footer-nav-btn" data-tab="productos">Granitos</button>
+          <button class="footer-nav-btn" data-tab="productos">Cuarzos</button>
+          <button class="footer-nav-btn" data-tab="productos">Bachas y Griferías</button>
+        </div>
+        <div class="footer__links">
+          <h5>Contacto</h5>
+          <a href="tel:+5491172065526">+54 11 7206-5526</a>
+          <a href="mailto:marmolesoestevp@gmail.com">marmolesoestevp@gmail.com</a>
+          <a href="https://wa.me/5491172065526?text=Hola!%20Quiero%20solicitar%20un%20presupuesto" target="_blank" rel="noopener">WhatsApp</a>
+
+          <div class="footer__social" aria-label="Redes sociales">
+            <h5>Seguinos</h5>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/people/Marmoles-Oeste-La-Reja/100077981787654/#" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook de Mármoles Oeste">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+                  <path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/marmolesoeste" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram de Mármoles Oeste">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+              </a>
+              <a href="https://wa.me/5491172065526?text=Hola!%20Quiero%20solicitar%20un%20presupuesto" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp de Mármoles Oeste">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Mármoles Oeste. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/5491172065526?text=Hola!%20Quiero%20solicitar%20un%20presupuesto" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-fab__tooltip">¡Escribinos!</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
