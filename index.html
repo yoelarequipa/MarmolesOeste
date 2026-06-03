@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" href="favicon.png" sizes="64x64" />
+  <link rel="shortcut icon" href="favicon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -22,15 +25,82 @@
     <div class="navbar__inner">
       <!-- Logo -->
       <a href="#" class="navbar__logo" data-tab="inicio">
-        <span class="logo-mark">M</span>
-        <span class="logo-text">Mármoles<strong>Oeste</strong></span>
+        <svg class="logo-svg" viewBox="0 0 116 52" xmlns="http://www.w3.org/2000/svg" aria-label="Mármoles Oeste" role="img">
+          <circle cx="26" cy="26" r="22" fill="none" stroke="#b8963e" stroke-width="1.4"/>
+          <text x="26" y="34" text-anchor="middle"
+                font-family="'Cormorant Garamond', Georgia, serif"
+                font-size="24" font-weight="300" letter-spacing="-1"
+                fill="#ffffff">MO</text>
+          <line x1="55" y1="13" x2="55" y2="39" stroke="#b8963e" stroke-width="0.7" opacity="0.45"/>
+          <text x="64" y="20" text-anchor="start"
+                font-family="'Jost', 'Helvetica Neue', sans-serif"
+                font-size="6" font-weight="300" letter-spacing="3"
+                fill="#aba9a0">MÁRMOLES</text>
+          <line x1="64" y1="26" x2="114" y2="26" stroke="#b8963e" stroke-width="0.5" opacity="0.55"/>
+          <text x="64" y="36" text-anchor="start"
+                font-family="'Jost', 'Helvetica Neue', sans-serif"
+                font-size="6" font-weight="500" letter-spacing="3"
+                fill="#d4b56a">OESTE</text>
+        </svg>
       </a>
 
       <!-- Desktop nav tabs -->
       <nav class="navbar__links" id="navLinks" aria-label="Navegación principal">
         <button class="nav-link active-link" data-tab="inicio"    aria-selected="true">Inicio</button>
         <button class="nav-link"             data-tab="nosotros"  aria-selected="false">Quiénes Somos</button>
-        <button class="nav-link"             data-tab="productos" aria-selected="false">Productos</button>
+
+        <!-- Productos con dropdown -->
+        <div class="nav-item nav-item--dropdown">
+          <button class="nav-link nav-link--dropdown-trigger" data-tab="productos" aria-selected="false" aria-haspopup="true" aria-expanded="false">
+            Productos
+            <svg class="dropdown-arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <div class="nav-dropdown__inner">
+              <button class="nav-dropdown__item" data-tab="productos" data-filter="piedras" role="menuitem">
+                <span class="nav-dropdown__icon">◈</span>
+                <span>
+                  <strong>Piedras Naturales</strong>
+                  <small>Mármoles y granitos</small>
+                </span>
+              </button>
+              <button class="nav-dropdown__item" data-tab="productos" data-filter="mesadas" role="menuitem">
+                <span class="nav-dropdown__icon">◻</span>
+                <span>
+                  <strong>Mesadas</strong>
+                  <small>Cocina y exteriores</small>
+                </span>
+              </button>
+              <button class="nav-dropdown__item" data-tab="productos" data-filter="banos" role="menuitem">
+                <span class="nav-dropdown__icon">✦</span>
+                <span>
+                  <strong>Baños</strong>
+                  <small>Revestimientos y vanitorios</small>
+                </span>
+              </button>
+              <button class="nav-dropdown__item" data-tab="productos" data-filter="bachas" role="menuitem">
+                <span class="nav-dropdown__icon">◇</span>
+                <span>
+                  <strong>Bachas</strong>
+                  <small>Acero y apoyo</small>
+                </span>
+              </button>
+              <button class="nav-dropdown__item" data-tab="productos" data-filter="griferia" role="menuitem">
+                <span class="nav-dropdown__icon">⬡</span>
+                <span>
+                  <strong>Griferías</strong>
+                  <small>Diseño y columnas de ducha</small>
+                </span>
+              </button>
+              <button class="nav-dropdown__item nav-dropdown__item--all" data-tab="productos" data-filter="all" role="menuitem">
+                Ver todos los productos →
+              </button>
+            </div>
+          </div>
+        </div>
+
         <button class="nav-link"             data-tab="contacto"  aria-selected="false">Contacto</button>
       </nav>
 
@@ -132,9 +202,22 @@
           <!-- Products grid -->
           <div class="products-grid" id="productsGrid">
 
-            <article class="product-card anim-in" data-category="piedras" style="--delay:.05s">
+            <!--
+              Para agregar más imágenes a la galería de un producto,
+              agregá data-gallery con las rutas separadas por coma.
+              La primera imagen (src del img) siempre se incluye automáticamente.
+
+              Ejemplo:
+              data-gallery=""
+            -->
+
+            <article class="product-card anim-in" data-category="piedras" style="--delay:.05s"
+              data-gallery="imagenes/Carrara_PC51000202_A9.webp">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Mármol Carrara blanco" loading="lazy" />
+                <img src="imagenes/Copia-de-Carrara_PC51010121_PR.webp" alt="Mármol Carrara blanco" loading="lazy" />
+                <button class="product-card__gallery-btn" aria-label="Ver galería">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
               </div>
               <div class="product-card__body">
                 <span class="product-card__tag">Mármoles</span>
@@ -143,42 +226,58 @@
               </div>
             </article>
 
-            <article class="product-card anim-in" data-category="piedras" style="--delay:.10s">
+            <article class="product-card anim-in" data-category="piedras" style="--delay:.10s"
+              data-gallery="imagenes/Marmol_Negro_Marquina_PC51410201_F2.webp">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80" alt="Mármol Travertino" loading="lazy" />
+                <img src="imagenes/Marmol_Negro_Marquina_PC51410201_PR.webp" alt="Mármol Negro Marquina" loading="lazy" />
+                <button class="product-card__gallery-btn" aria-label="Ver galería">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
               </div>
               <div class="product-card__body">
                 <span class="product-card__tag">Mármoles</span>
-                <h3>Travertino Romano</h3>
-                <p>Textura cálida y orgánica perfecta para ambientes que buscan un estilo rústico de lujo y atemporalidad.</p>
+                <h3>Mármol Negro Marquina</h3>
+                <p>Suave, aterciopelado, el mármol Negro Marquina es combinable con todo tipo de ambientes, desde los más sofisticados a los más elegantes y sencillos.</p>
               </div>
             </article>
 
-            <article class="product-card anim-in" data-category="piedras" style="--delay:.15s">
+            <article class="product-card anim-in" data-category="piedras" style="--delay:.15s"
+              data-gallery="imagenes/Gris_Perla_PC00410201_A4-scaled.webp,imagenes/Gris_Perla_PC00410201_A6-1536x1024.webp">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Granito negro absoluto" loading="lazy" />
+                <img src="imagenes/Gto__Gris_Perla_Ldo_20_PC00410201_PR.webp" alt="Granito Gris Perla" loading="lazy" />
+                <button class="product-card__gallery-btn" aria-label="Ver galería">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
               </div>
               <div class="product-card__body">
                 <span class="product-card__tag">Granitos</span>
-                <h3>Granito Negro Absoluto</h3>
-                <p>Resistente, durable y de aspecto sofisticado. La elección preferida para cocinas y exteriores exigentes.</p>
+                <h3>Granito Gris Perla</h3>
+                <p>Original de la provincia de San Luis. Es una roca de color gris claro, de grano medio, muy compacta y de fractura irregular.</p>
               </div>
             </article>
 
-            <article class="product-card anim-in" data-category="piedras" style="--delay:.20s">
+            <article class="product-card anim-in" data-category="piedras" style="--delay:.20s"
+              data-gallery="">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1556909211-36987daf7b4d?w=600&q=80" alt="Cuarzo blanco engineered" loading="lazy" />
+                <img src="imagenes/Blanco_Dallas_PC15810201_PR.webp" alt="Granito Blanco Dallas" loading="lazy" />
+                <button class="product-card__gallery-btn" aria-label="Ver galería">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
               </div>
               <div class="product-card__body">
-                <span class="product-card__tag">Cuarzos</span>
-                <h3>Cuarzo Blanco Nieve</h3>
-                <p>Superficie no porosa, antibacterial e inalterable. La alternativa moderna al mármol natural para cocinas.</p>
+                <span class="product-card__tag">Granitos</span>
+                <h3>Granito Blanco Dallas</h3>
+                <p>Piedra natural brasileña, blanca con destellos rojos y negros.</p>
               </div>
             </article>
 
-            <article class="product-card anim-in" data-category="mesadas" style="--delay:.05s">
+            <article class="product-card anim-in" data-category="mesadas" style="--delay:.05s"
+              data-gallery="imagenes/Gris_Perla_PC00410201_A4-scaled.webp,imagenes/Gris_Perla_PC00410201_A6-1536x1024.webp">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80" alt="Mesada de cocina moderna" loading="lazy" />
+                <img src="imagenes/mesadas.webp" alt="Mesada de cocina moderna" loading="lazy" />
+                <button class="product-card__gallery-btn" aria-label="Ver galería">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
               </div>
               <div class="product-card__body">
                 <span class="product-card__tag">Mesadas</span>
@@ -187,9 +286,13 @@
               </div>
             </article>
 
-            <article class="product-card anim-in" data-category="mesadas" style="--delay:.10s">
+            <article class="product-card anim-in" data-category="mesadas" style="--delay:.10s"
+              data-gallery="">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Escalera de mármol" loading="lazy" />
+                <img src="imagenes/escaleras.webp" alt="Escalera de mármol" loading="lazy" />
+                <button class="product-card__gallery-btn" aria-label="Ver galería">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
               </div>
               <div class="product-card__body">
                 <span class="product-card__tag">Escaleras</span>
@@ -198,9 +301,13 @@
               </div>
             </article>
 
-            <article class="product-card anim-in" data-category="banos" style="--delay:.05s">
+            <article class="product-card anim-in" data-category="banos" style="--delay:.05s"
+              data-gallery="">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Baño revestido en mármol" loading="lazy" />
+                <img src="imagenes/revestimiento_baño.webp" alt="Baño revestido en mármol" loading="lazy" />
+                <button class="product-card__gallery-btn" aria-label="Ver galería">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
               </div>
               <div class="product-card__body">
                 <span class="product-card__tag">Baños</span>
@@ -209,9 +316,13 @@
               </div>
             </article>
 
-            <article class="product-card anim-in" data-category="bachas" style="--delay:.05s">
+            <article class="product-card anim-in" data-category="bachas" style="--delay:.05s"
+              data-gallery="">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80" alt="Bacha de acero inoxidable" loading="lazy" />
+                <img src="imagenes/bachaacero.webp" alt="Bacha de acero inoxidable" loading="lazy" />
+                <button class="product-card__gallery-btn" aria-label="Ver galería">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
               </div>
               <div class="product-card__body">
                 <span class="product-card__tag">Bachas</span>
@@ -220,20 +331,28 @@
               </div>
             </article>
 
-            <article class="product-card anim-in" data-category="bachas" style="--delay:.10s">
+            <article class="product-card anim-in" data-category="bachas" style="--delay:.10s"
+              data-gallery="">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80" alt="Bacha de apoyo moderna" loading="lazy" />
+                <img src="imagenes/bachaapoyo.webp" alt="Bacha de apoyo moderna" loading="lazy" />
+                <button class="product-card__gallery-btn" aria-label="Ver galería">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
               </div>
               <div class="product-card__body">
                 <span class="product-card__tag">Bachas</span>
                 <h3>Bachas de Apoyo</h3>
-                <p>Diseños modernos y orgánicos en cerámica y piedra que se convierten en el centro de atención del baño.</p>
+                <p>Diseños modernos y orgánicos en mármol y granito que se convierten en el centro de atención del baño.</p>
               </div>
             </article>
 
-            <article class="product-card anim-in" data-category="griferia" style="--delay:.05s">
+            <article class="product-card anim-in" data-category="griferia" style="--delay:.05s"
+              data-gallery="">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80" alt="Grifería moderna dorada" loading="lazy" />
+                <img src="imagenes/griferias.webp" alt="Grifería moderna dorada" loading="lazy" />
+                <button class="product-card__gallery-btn" aria-label="Ver galería">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
               </div>
               <div class="product-card__body">
                 <span class="product-card__tag">Griferías</span>
@@ -242,9 +361,13 @@
               </div>
             </article>
 
-            <article class="product-card anim-in" data-category="griferia" style="--delay:.10s">
+            <article class="product-card anim-in" data-category="griferia" style="--delay:.10s"
+              data-gallery="">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1564540583246-934409427776?w=600&q=80" alt="Ducha con grifería moderna" loading="lazy" />
+                <img src="imagenes/griferiaducha.webp" alt="Ducha con grifería moderna" loading="lazy" />
+                <button class="product-card__gallery-btn" aria-label="Ver galería">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
               </div>
               <div class="product-card__body">
                 <span class="product-card__tag">Griferías</span>
@@ -253,14 +376,18 @@
               </div>
             </article>
 
-            <article class="product-card anim-in" data-category="piedras" style="--delay:.25s">
+            <article class="product-card anim-in" data-category="piedras" style="--delay:.25s"
+              data-gallery="imagenes\Negro_Boreal_PC15130201_A3-1536x864.webp">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=600&q=80" alt="Granito arabesco multicolor" loading="lazy" />
+                <img src="imagenes/Negro_Boreal_PC15130201_PR.webp" alt="Granito Negro Boreal" loading="lazy" />
+                <button class="product-card__gallery-btn" aria-label="Ver galería">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+                </button>
               </div>
               <div class="product-card__body">
                 <span class="product-card__tag">Granitos</span>
-                <h3>Granito Arabesco</h3>
-                <p>Veteado multicolor único en cada pieza. Rojo, ocre y negro que crean composiciones irrepetibles en cada slab.</p>
+                <h3>Granito Negro Boreal</h3>
+                <p>El Granito Negro Boreal tiene un fondo negro con nubes y detalles blancos, lo que le confiere un aspecto poco común.</p>
               </div>
             </article>
 
@@ -358,6 +485,48 @@
   </main><!-- /tab-pages -->
 
   <!-- ══════════════════════════════════════════
+       LIGHTBOX / GALLERY MODAL
+  ══════════════════════════════════════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galería de imágenes" hidden>
+    <div class="lightbox__backdrop"></div>
+    <div class="lightbox__container">
+
+      <!-- Header -->
+      <div class="lightbox__header">
+        <div class="lightbox__title-block">
+          <span class="lightbox__tag" id="lightboxTag"></span>
+          <h3 class="lightbox__title" id="lightboxTitle"></h3>
+        </div>
+        <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar galería">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Main image stage -->
+      <div class="lightbox__stage">
+        <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Imagen anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+
+        <div class="lightbox__img-wrap" id="lightboxImgWrap">
+          <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+        </div>
+
+        <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Siguiente imagen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <!-- Counter + thumbnails -->
+      <div class="lightbox__footer">
+        <span class="lightbox__counter" id="lightboxCounter">1 / 1</span>
+        <div class="lightbox__thumbs" id="lightboxThumbs"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
        FOOTER (siempre visible)
   ══════════════════════════════════════════ -->
   <footer class="footer">
@@ -365,8 +534,23 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="#" class="navbar__logo" data-tab="inicio">
-            <span class="logo-mark">M</span>
-            <span class="logo-text">Mármoles<strong>Oeste</strong></span>
+            <svg class="logo-svg" viewBox="0 0 116 52" xmlns="http://www.w3.org/2000/svg" aria-label="Mármoles Oeste" role="img">
+          <circle cx="26" cy="26" r="22" fill="none" stroke="#b8963e" stroke-width="1.4"/>
+          <text x="26" y="34" text-anchor="middle"
+                font-family="'Cormorant Garamond', Georgia, serif"
+                font-size="24" font-weight="300" letter-spacing="-1"
+                fill="#ffffff">MO</text>
+          <line x1="55" y1="13" x2="55" y2="39" stroke="#b8963e" stroke-width="0.7" opacity="0.45"/>
+          <text x="64" y="20" text-anchor="start"
+                font-family="'Jost', 'Helvetica Neue', sans-serif"
+                font-size="6" font-weight="300" letter-spacing="3"
+                fill="#aba9a0">MÁRMOLES</text>
+          <line x1="64" y1="26" x2="114" y2="26" stroke="#b8963e" stroke-width="0.5" opacity="0.55"/>
+          <text x="64" y="36" text-anchor="start"
+                font-family="'Jost', 'Helvetica Neue', sans-serif"
+                font-size="6" font-weight="500" letter-spacing="3"
+                fill="#d4b56a">OESTE</text>
+        </svg>
           </a>
           <p>Fabricación e instalación de mármoles, granitos, cuarzos, mesadas, bachas y griferías. Calidad sin compromiso desde 2004.</p>
         </div>
